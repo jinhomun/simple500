@@ -1,0 +1,131 @@
+body {
+    background-color: var(--white);
+    color: var(--color);
+}
+
+main {
+    min-height: 80vh;
+}
+
+// 섹션 공통 요소
+section {
+    padding: 40px;
+
+    @media (max-width: 800px) {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+
+        em {
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 100%;
+                height: 50%;
+                background-color: var(--red100);
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: -1;
+                border-radius: 30px;
+            }
+        }
+    }
+}
+
+// 섹션 로딩 소스
+.isLoading {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.isLoaded {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.reple {
+    max-width: 600px;
+    border: 1px solid #000;
+    margin: 20px auto;
+    padding: 10px;
+    position: relative;
+}
+
+.reple-info {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1000;
+}
+
+.modal {
+    border: 1px solid #000;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.mypage {
+    text-align: center;
+    padding: 20px;
+}
+
+.mypage label {
+    cursor: pointer;
+}
+
+.mypage input {
+    display: none;
+}
+
+.list__search {
+    display: flex;
+    align-items: center;
+
+    input {
+        padding: 5px;
+        margin: 20px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        outline: none;
+
+        &:focus {
+            border-color: #007bff; // Change the color to your preferred focus color
+        }
+    }
+
+    button {
+        padding: 5px 10px;
+        background-color: #007bff; // Change the color to your preferred button color
+        color: #fff; // Change the color to your preferred text color
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+
+    }
+}
+
+.list__btn {
+    button {
+        margin-left: 20px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        padding: 5px 10px;
+        background-color: #007bff; // Change the color to your preferred button color
+        color: #fff; // Change the color to your preferred text color
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #0056b3; // Change the color to your preferred hover color
+        }
+    }
+}
