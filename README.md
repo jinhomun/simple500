@@ -634,3 +634,7 @@ firebase.initializeApp(firebaseConfig);
 
 export default firebase;
 ```
+## heroku
+heroku CLI 윈도우 64bit 설치   
+simple600 >> npm install -g heroku   
+command prompt -> heroku login   
